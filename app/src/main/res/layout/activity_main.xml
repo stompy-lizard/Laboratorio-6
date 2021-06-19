@@ -11,40 +11,51 @@
         android:layout_height="96dp"
         android:backgroundTint="@color/btn1"
         android:text="@string/btn1"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="143dp"
         android:layout_height="96dp"
-        android:text="@string/btn2"
         android:backgroundTint="@color/btn2"
-        android:textColor="@color/black" />
+        android:text="@string/btn2"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
     <Button
         android:id="@+id/button3"
         android:layout_width="143dp"
         android:layout_height="96dp"
-        android:text="@string/btn3"
         android:backgroundTint="@color/btn3"
-        android:textColor="@color/black" />
+        android:text="@string/btn3"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
     <Button
         android:id="@+id/button4"
         android:layout_width="143dp"
         android:layout_height="96dp"
-        android:text="@string/btn4"
         android:backgroundTint="@color/btn4"
-        android:textColor="@color/black" />
+        android:text="@string/btn4"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
     <Button
         android:id="@+id/button5"
         android:layout_width="143dp"
         android:layout_height="96dp"
-        android:text="@string/btn5"
         android:backgroundTint="@color/btn5"
-        android:textColor="@color/black" />
+        android:text="@string/btn5"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
     <Button
         android:id="@+id/button6"
         android:layout_width="143dp"
         android:layout_height="96dp"
-        android:text="@string/btn6"
         android:backgroundTint="@color/btn6"
-        android:textColor="@color/black" />
+        android:text="@string/btn6"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
 </LinearLayout>

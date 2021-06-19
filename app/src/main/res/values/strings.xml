@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Sonidos</string>
-    <string name="btn1">Botón 1</string>
-    <string name="btn2">Botón 2</string>
-    <string name="btn3">Botón 3</string>
-    <string name="btn4">Botón 4</string>
-    <string name="btn5">Botón 5</string>
-    <string name="btn6">Botón 6</string>
+    <string name="btn1">🐕</string>
+    <string name="btn2">🐈</string>
+    <string name="btn3">🐎</string>
+    <string name="btn4">🐦</string>
+    <string name="btn5">🦟</string>
+    <string name="btn6">🦁</string>
 </resources>
