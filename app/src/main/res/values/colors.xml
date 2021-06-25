@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="success">#FF44CC44</color>
+    <color name="fail">#FFCC4444</color>
     <color name="btn1">#FFFF6666</color>
     <color name="btn2">#FFFF66FF</color>
     <color name="btn3">#FF6666FF</color>

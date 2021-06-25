@@ -114,7 +114,37 @@ class MainActivity : AppCompatActivity() {
     // La función al presionar el boton depende del indice del botón y hace sonar el sonido
     // correspondiente.
     private fun onClickListener(i: Int) {
-        println("Playing $i")
+        // ejecuta el sonido asociado al botón.
         sounds[i].start()
+
+        // siempre y cuando se han presionado botones menos o la cantidad de veces de la secuencia.
+        // generada.
+        if (user_sequence.size <= sequence.size) {
+            // se agrega el botón presionadoa a la secuencia del usuario.
+            user_sequence.add(i)
+            // se revisa la secuencia del usuario contra la generada.
+            // esto se puede optimizar en caso que las secuencias sean muy grandes, siendo de 4
+            // valores, esto no es algo que precise.
+            user_sequence.forEachIndexed { idx, item ->
+                // si las secuencias son distintas, muestra el mensaje de error y deshabilita
+                // los botones del juego, solo se puede presionar el botón de inicio para reiniciar
+                // el juego.
+                if (item != sequence[idx]) {
+                    message.text = resources.getText(R.string.msg_fail)
+                    message.setTextColor(resources.getColor(R.color.fail))
+                    for (btn in buttons) btn.isEnabled = false
+                }
+                // Si la secuencia es la misma y el tamaño de ambas secuencias es la misma, esto
+                // indica que el usuario acertó la secuencia, se muestra el mensaje de éxito y se
+                // deshabilitan los botones del juego, solo se permite el botón de inicio para
+                // reiniciar el juego.
+                else if (idx == sequence.size - 1) {
+                    message.text = resources.getText(R.string.msg_success)
+                    message.setTextColor(resources.getColor(R.color.success))
+                    for (btn in buttons) btn.isEnabled = false
+                }
+            }
+        }
+
     }
 }
