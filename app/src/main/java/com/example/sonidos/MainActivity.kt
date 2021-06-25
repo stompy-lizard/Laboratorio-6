@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var sequence: List<Int>
 
+    private val user_sequence = mutableListOf<Int>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -67,9 +68,6 @@ class MainActivity : AppCompatActivity() {
         }
         message = findViewById(R.id.message)
         message.text = ""
-
-        sequence = List(4) { Random.nextInt(0, 6) }
-        println(sequence)
     }
 
     override fun onStart() {
@@ -85,27 +83,31 @@ class MainActivity : AppCompatActivity() {
 
     private fun playSequence() {
         var i = 0
+        val timeStep: Long = 700L
+        val timePressed: Long = 350L
+        sequence = List(4) { Random.nextInt(0, 6) }
+        user_sequence.clear()
+        message.text = ""
         btnstart.isEnabled = false
-        for (btn in buttons) {
-            btn.isEnabled = false
-        }
+        for (btn in buttons) btn.isEnabled = false
 
-        sequence.forEachIndexed{ i, btnIdx ->
-            val wait: Long = (500 * i).toLong()
+        // Demonstración
+        sequence.forEachIndexed { i, btnIdx ->
             Handler().postDelayed(Runnable {
-                println(buttons[btnIdx])
-                buttons[btnIdx].performClick()
+                // ejecuta el sonido asociado al botón.
+                sounds[btnIdx].start()
+                // pone color del botón en blanco para demostrar la secuencia.
                 buttons[btnIdx].setBackgroundColor(getResources().getColor(R.color.white))
                 Handler().postDelayed(Runnable {
+                    // revierte el cambio de color del demo.
                     buttons[btnIdx].setBackgroundColor(buttons_colors[btnIdx])
-                    if (i == sequence.size-1) {
+                    // si es el último botón, se habilitan los botones nuevamente
+                    if (i == sequence.size - 1) {
                         btnstart.isEnabled = true
-                        for (btn in buttons) {
-                            btn.isEnabled = true
-                        }
+                        for (btn in buttons) btn.isEnabled = true
                     }
-                }, 200)
-            }, wait)
+                }, timePressed)
+            }, timeStep * i + 1000)
         }
     }
 
