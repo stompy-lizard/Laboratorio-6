@@ -22,12 +22,20 @@ class MainActivity : AppCompatActivity() {
     // Lista de colores de botones.
     private val buttons_colors = mutableListOf<Int>()
 
+    // Boton de inicio.
     private lateinit var btnstart: Button
+
+    // Mensaje de secuencia correcta o incorrecta.
     private lateinit var message: TextView
 
+    // Secuencia aleatoria a generar.
     private lateinit var sequence: List<Int>
 
+    // Secuencia de botones ingresados por el usuario.
     private val user_sequence = mutableListOf<Int>()
+
+    // Cuando se crea la actividad se definen los sonidos, los botones y los colores de estos.
+    // Además se le asigna una función a ejecutar cuando se presionan los botones.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         buttons.add(findViewById(R.id.button5))
         buttons.add(findViewById(R.id.button6))
 
+        // Se agregan los colores de los botones.
         buttons_colors.add(R.color.btn1)
         buttons_colors.add(R.color.btn2)
         buttons_colors.add(R.color.btn3)
@@ -67,32 +76,47 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Se define la acción del botón de inicio.
         btnstart = findViewById(R.id.buttonstart)
         btnstart.setOnClickListener {
             onBtnStartPressHandler()
         }
+
+        // Se inicializa el mensaje vacío.
         message = findViewById(R.id.message)
         message.text = ""
     }
 
     override fun onStart() {
         super.onStart()
-
+        // demonstración inicial.
         playSequence()
     }
 
     private fun onBtnStartPressHandler() {
+        // demonstración.
         playSequence()
     }
 
-
+    // Ejecuta la demonstración.
     private fun playSequence() {
-        var i = 0
+
+        // tiempo entre botones demonstrados(ms).
         val timeStep: Long = 700L
+
+        // tiempo que el botón se muestra en blanco para la secuencia(ms).
         val timePressed: Long = 350L
+
+        // la secuencia se calcula cada vez que se demuestra.
         sequence = List(4) { Random.nextInt(0, 6) }
+
+        // se limpia la secuencia del usuario
         user_sequence.clear()
+
+        // limpiar mensaje
         message.text = ""
+
+        // deshabilitar los botones para la demonstración.
         btnstart.isEnabled = false
         for (btn in buttons) btn.isEnabled = false
 
