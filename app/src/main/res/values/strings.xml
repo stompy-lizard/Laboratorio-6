@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Sonidos</string>
+    <string name="btn_start">Inicio</string>
+    <string name="msg_success">Secuencia Correcta</string>
+    <string name="msg_fail">Secuencia Inorrecta</string>
     <string name="btn1">🐕</string>
     <string name="btn2">🐈</string>
     <string name="btn3">🐎</string>
