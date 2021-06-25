@@ -55,6 +55,11 @@ class MainActivity : AppCompatActivity() {
         buttons_colors.add(R.color.btn5)
         buttons_colors.add(R.color.btn6)
 
+        // Poner colores a los botones.
+        buttons.forEachIndexed { i, btn ->
+            btn.setBackgroundColor(buttons_colors[i])
+        }
+
         // Se agrega la función a cada botón cuando se presiona.
         for (i in 0 until buttons.size) {
             buttons[i].setOnClickListener {
