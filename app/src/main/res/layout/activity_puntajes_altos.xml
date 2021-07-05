@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="96dp"
                 android:backgroundTint="@color/black"
-                android:text="@string/nombreJuego"
+                android:text="@string/tituloPuntajesAltos"
                 android:textColor="@color/black"
                 android:textSize="34sp"
                 android:textStyle="bold" />
@@ -36,7 +36,7 @@
     </view>
 
     <view
-        android:id="@+id/row1"
+        android:id="@+id/puntajesAltosListRow"
         class="androidx.appcompat.widget.LinearLayoutCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,50 +44,17 @@
         android:orientation="horizontal">
 
         <view
-            android:id="@+id/col1"
+            android:id="@+id/puntajesAltosListCol"
             class="androidx.appcompat.widget.LinearLayoutCompat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/juegoBtn"
-                android:layout_width="170dp"
-                android:layout_height="96dp"
-                android:backgroundTint="@color/black"
-                android:text="@string/juegoBtn"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </view>
-    </view>
-
-    <view
-        android:id="@+id/row2"
-        class="androidx.appcompat.widget.LinearLayoutCompat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <view
-            android:id="@+id/col2"
-            class="androidx.appcompat.widget.LinearLayoutCompat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/highScoresBtn"
-                android:layout_width="170dp"
-                android:layout_height="96dp"
-                android:backgroundTint="@color/black"
-                android:text="@string/puntajesAltosBtn"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+            <ListView
+                android:id="@+id/puntajesAltosList"
+                android:layout_width="wrap_content"
+                android:layout_height="350sp"/>
         </view>
     </view>
 

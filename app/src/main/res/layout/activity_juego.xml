@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <view
+        android:id="@+id/puntajeRow"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <view
+            android:id="@+id/puntajeCol"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/puntajeText"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/black"
+                android:text="Puntaje"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+    </view>
+
+
+    <view
+        android:id="@+id/startrow"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <view
+            android:id="@+id/startcol"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/buttonstart"
+                android:layout_width="170dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/black"
+                android:text="@string/btn_start"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+        </view>
+    </view>
+
+    <view
+        android:id="@+id/row1"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <view
+            android:id="@+id/row1col1"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn1"
+                android:text="@string/btn1"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+
+        <view
+            android:id="@+id/row1col2"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn2"
+                android:text="@string/btn2"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+
+    </view>
+
+
+    <view
+        android:id="@+id/row2"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <view
+            android:id="@+id/row2col1"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn3"
+                android:text="@string/btn3"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+
+        <view
+            android:id="@+id/row2col2"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn4"
+                android:text="@string/btn4"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+    </view>
+
+    <view
+        android:id="@+id/row3"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <view
+            android:id="@+id/row3col1"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn5"
+                android:text="@string/btn5"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+
+        <view
+            android:id="@+id/row3col2"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="143dp"
+                android:layout_height="96dp"
+                android:backgroundTint="@color/btn6"
+                android:text="@string/btn6"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </view>
+    </view>
+
+
+    <view
+        android:id="@+id/messagerow"
+        class="androidx.appcompat.widget.LinearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <view
+            android:id="@+id/messagecol"
+            class="androidx.appcompat.widget.LinearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="34sp" />
+        </view>
+    </view>
+
+</LinearLayout>
